@@ -14,8 +14,8 @@ public class BOJ_2839 {//[BOJ_2839]설탕배달 jaehwan solved
             answer= n/sugar5;
         } else { //아닌 경우 전부 계산 필요함
             for(int i=max5;i>=0;i--){ //5가 몇개 들어가는지 계산이 필요
-                if(((n-i*5)%3) == 0){
-                    answer=i+((n-i*5)/3);//5의 개수 + 3의 개수
+                if(((n-i*sugar5)%sugar3) == 0){
+                    answer=i+((n-i*sugar5)/sugar3);//5의 개수 + 3의 개수
                     break;
                 }
             }
