@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BOJ_2748 {//[BOJ_2748]피보나치2 solved - DP 사용 
+public class BOJ_2748 {//[BOJ_2748]피보나치2 solved - dp 사용 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int n = sc.nextInt();
