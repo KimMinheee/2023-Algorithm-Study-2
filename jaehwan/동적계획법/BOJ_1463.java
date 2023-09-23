@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BOJ_1463 {//[BOJ_1463]1로만들기 jaehwan solved - dp 사용 
+public class BOJ_1463 {//[BOJ_1463]1로만들기 jaehwan solved - dp 사용
     static int N;
     static int[] D; //연상 횟수 배열
     public static void main(String[] args) {
@@ -36,4 +36,8 @@ public class BOJ_1463 {//[BOJ_1463]1로만들기 jaehwan solved - dp 사용
 9=2
 10=3
 
-* */
+D[10]을 기준으로 보면
+3개의 연산 +1 /2 /3 중에서 가장 작은 값을 선택하면 된다
+MIN(D[5]+1 , D[9]+1)
+어디서 올수있는지를 계산하며 MIN값을 갱신
+*/
