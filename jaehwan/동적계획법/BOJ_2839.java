@@ -23,3 +23,6 @@ public class BOJ_2839 {//[BOJ_2839]설탕배달 jaehwan solved
         System.out.println(answer);
     }
 }
+/*
+결국 5를 최대한 많이 사용하는게 핵심
+*/
