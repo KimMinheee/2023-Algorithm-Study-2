@@ -1,22 +1,24 @@
 package minhee.시뮬레이션;
 
-import com.sun.security.jgss.GSSUtil;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.StringTokenizer;
 
-public class B16918_봄버맨 {
-    static final int[][] move = {{-1, 0}, {1, 0}, {0, 1}, {0, -1}};
-    static int R, C, N;
-    static char[][] map;
-    static Queue<Integer> bombTimeQueue = new LinkedList<>();
+/**
+ * [그래프]p16918_봄버맨
+ */
 
-    public static void main(String[] args) throws IOException {
+public class B16918_봄버맨 {
+    static int R,C,N;
+    static char[][] map;
+    static List<Point> bombList = new ArrayList<>();
+    static int[] dx = {-1,1,0,0};
+    static int[] dy = {0,0,-1,1};
+    static StringBuilder sb = new StringBuilder();
+    public static void main(String[] args)throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         R = Integer.parseInt(st.nextToken());
@@ -25,75 +27,72 @@ public class B16918_봄버맨 {
 
         map = new char[R][C];
 
-        for (int i = 0; i < R; i++) {
+        for(int i=0; i<R; i++){
             String line = br.readLine();
-            for (int j = 0; j < C; j++) {
-                if (line.charAt(j) == 'O') {
-                    map[i][j] = '0';
-                } else {
-                    map[i][j] = line.charAt(j);
+            for(int j=0; j<C; j++){
+                char tmp = line.charAt(j);
+                map[i][j] = tmp;
+                if(tmp == 'O'){
+                    bombList.add(new Point(i,j));
                 }
             }
         }
 
-        int currentTime = 0;
-        bombTimeQueue.add(currentTime); //맨 처음 폭탄 세팅
+        if(N>1) getMap2(2);
 
-        while (currentTime <= N) {
-            if (currentTime <= 1) {
-                currentTime++;
-                continue;
-            } else if (currentTime == bombTimeQueue.peek() + 3) {//3초 지나서 터져야 하는 시점
-                int target = bombTimeQueue.poll();
-                executeBomb(target);
-            } else {
-                setBomb(currentTime);
-            }
-            currentTime++;
-
-        }
-
-        printMap();
-    }
-
-    public static void executeBomb(int target) { //map에서 target에 해당하는 지점을 터트린다.
-        for (int i = 0; i < R; i++) {
-            for (int j = 0; j < C; j++) {
-                if (map[i][j] == (char) (target + 48)) {
-                    for (int idx = 0; idx < 4; idx++) {
-                        int mx = i + move[idx][0];
-                        int my = j + move[idx][1];
-                        if (mx < 0 || my < 0 || mx >= R || my >= C) continue;
-                        map[mx][my] = '.';
-                    }
-                    map[i][j] = '.';
-                }
-            }
-        }
-    }
-
-    public static void setBomb(int time) {
-        for (int i = 0; i < R; i++) {
-            for (int j = 0; j < C; j++) {
-                if (map[i][j] == '.') {
-                    map[i][j] = (char) (time + 48);
-                }
-            }
-        }
-        bombTimeQueue.add(time);
-    }
-
-    public static void printMap() {
-        StringBuilder sb = new StringBuilder();
         for(int i=0; i<R; i++){
             for(int j=0; j<C; j++){
-                if(Character.isDigit(map[i][j])){
-                    sb.append('O');
-                }
-                else sb.append('.');
+                sb.append(map[i][j]);
             }
             sb.append("\n");
         }
         System.out.println(sb.toString());
     }
+
+    static void getMap2(int second){
+        while(second <= N){
+            if(second %2 == 0){
+                for(int i=0; i<R; i++){
+                    for(int j=0; j<C; j++){
+                        map[i][j] = 'O'; //폭탄 전부 설치.
+                    }
+                }
+            }
+            else if(second %2 != 0){
+                //터뜨리기
+                for(Point point : bombList){
+                    map[point.x][point.y] = '.';
+                    for(int i=0; i<4; i++){
+                        int mx = point.x + dx[i];
+                        int my = point.y + dy[i];
+
+                        if(mx<0 || mx>=R || my<0 || my>=C) continue; //경계 확인
+
+                        //폭탄 인접부분 '.'으로 만들기
+                        map[mx][my] = '.';
+                    }
+                }
+                bombList.clear();
+                //터트린 후 폭탄 위치
+                for(int i=0; i<R; i++){
+                    for(int j=0; j<C; j++){
+                        if(map[i][j] == 'O') bombList.add(new Point(i,j));
+                    }
+                }
+            }
+            second ++;
+        }
+    }
+
+
+}
+class Point{
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    int x;
+    int y;
+
 }
