@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-public class 이진변환반복하기 { //[이진변환반복하기]jaehwan solved - 탐색 사용
+public class 이진변환반복하기 { //[PGM-70129]이진변환반복하기 jaehwan solved
     public static void main(String[] args) {
         Solution solution=new Solution();
         int[] answer= solution.solution("110010101001");//TEST CASE
