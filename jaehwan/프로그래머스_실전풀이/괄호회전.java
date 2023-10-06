@@ -49,6 +49,6 @@ public class 괄호회전 { //[PGM-76502]괄호회전 jaehwan solved - stack 사
                 }
             }
         }
-        return stack.isEmpty();
+        return true;
     }
 }
