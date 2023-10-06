@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Solution {//[점프와순간이동] jaehwan solved
+public class Solution {//[PGM-12980]점프와순간이동 jaehwan solved
     public int solution(int n) {
         int answer=n;
         int energy=0;
