@@ -1,4 +1,4 @@
-class 배열자르기 {//[PGM-87390]배열자르기 jaehwan solved
+class 배열자르기 {//[PGM-87390]배열자르기 jaehwan solved 
     public int[] solution(int n, long left, long right) {
          int[] answer = new int[(int)(right - left) + 1];
         
