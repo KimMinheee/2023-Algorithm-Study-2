@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-class 영어끝날잇기 {//[영어끝말잇기]jaehwan solved - 해쉬맵 사용
+class 영어끝날잇기 {//[PGM-12981]영어끝말잇기 jaehwan solved - 해쉬맵 사용
     public int[] solution(int n, String[] words) {
         int[] answer = {0,0};
         HashMap<String, Integer> Map = new HashMap<String, Integer>();
