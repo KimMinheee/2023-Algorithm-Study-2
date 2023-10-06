@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
-public class 짝지어제거하기 {//[짝지어 제거하기]jaehwan solved - 탐색 사용
+public class 짝지어제거하기 {//[PGM-12973]짝지어 제거하기 jaehwan solved - 탐색 사용
     public static void main(String[] args) {
         Solution s=new Solution();
         int num=s.solution("baabaa");
