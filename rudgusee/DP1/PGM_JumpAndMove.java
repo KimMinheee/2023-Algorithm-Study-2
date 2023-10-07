@@ -1,7 +1,7 @@
 package rudgusee.DP1;
 
 
-class PGM_Jump {
+class PGM_JumpAndMove {
     public int solution(int n) {
         int ans = 0;
 
@@ -30,7 +30,7 @@ class PGM_Jump {
     }
 
     public static void main(String[] args) {
-        PGM_Jump pgm_jump = new PGM_Jump();
+        PGM_JumpAndMove pgm_jump = new PGM_JumpAndMove();
         System.out.println(pgm_jump.solution(5));
         System.out.println(pgm_jump.solution(6));
         System.out.println( pgm_jump.solution(5000));
