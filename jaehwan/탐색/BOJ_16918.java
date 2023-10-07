@@ -11,7 +11,7 @@ public class BOJ_16918 {//[BOJ_16918]봄버맨 jaehwan solved - bfs 사용
     static StringTokenizer st;
     static char[][] map;
     static Queue<int[]> q =new LinkedList<>();//자표로 보내서 저장
-    static int[] dx = {-1, 0, 1, 0}; // 북 동 남 서
+    static int[] dx = {-1, 0, 1, 0};
     static int[] dy = {0, 1, 0, -1};
     static int R;
     static int C;
