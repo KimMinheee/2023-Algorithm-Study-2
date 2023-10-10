@@ -51,15 +51,14 @@ public class B16918_봄버맨 {
 
     static void getMap2(int second){
         while(second <= N){
-            if(second %2 == 0){
+            if(second %2 == 0){ //초가 짝수일 때 - 폭탄 설치
                 for(int i=0; i<R; i++){
                     for(int j=0; j<C; j++){
                         map[i][j] = 'O'; //폭탄 전부 설치.
                     }
                 }
             }
-            else if(second %2 != 0){
-                //터뜨리기
+            else if(second %2 != 0){ // 초가 홀수일 때 - 터뜨리기
                 for(Point point : bombList){
                     map[point.x][point.y] = '.';
                     for(int i=0; i<4; i++){
