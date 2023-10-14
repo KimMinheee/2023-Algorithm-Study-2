@@ -5,8 +5,6 @@ import java.util.*;
 class P64065_튜플 {
     public int[] solution(String s) {
         //substring(start, end)  => "" "{3}" (1,length-1) (1,2) -> "3" ""
-        String num2 = "{2}";
-        System.out.println("zx" + num2.substring(1, num2.length()));
 
         HashSet<Integer> set = new LinkedHashSet<>();
         s = s.replace("{", "");
