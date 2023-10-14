@@ -2,7 +2,7 @@ package programmers;
 
 import java.util.StringTokenizer;
 
-public class 뉴스클러스터링 {//[PGM-17677]뉴스클러스터링 jaehwan solved 
+public class 뉴스클러스터링 {//[PGM-17677]뉴스클러스터링 jaehwan solved
     public int solution(String str1, String str2) {
         int num = 65536;
         int answer = 0;
@@ -29,7 +29,7 @@ public class 뉴스클러스터링 {//[PGM-17677]뉴스클러스터링 jaehwan s
                 arr2[i]="-2";
             }
         }
-        int count=0; //교집합 수수
+        int count=0; //교집합 수
         for(int i=0;i<arr1.length;i++){
             for(int j=0;j< arr2.length;j++){
                 if(arr1[i].equals(arr2[j])){
