@@ -6,7 +6,6 @@ public class 뉴스클러스터링 {//[PGM-17677]뉴스클러스터링 jaehwan s
     public int solution(String str1, String str2) {
         int num = 65536;
         int answer = 0;
-        int sum=str1.length()+str2.length();
 
         str1=str1.toUpperCase();//대문자로 통일
         str2=str2.toUpperCase();
@@ -30,7 +29,7 @@ public class 뉴스클러스터링 {//[PGM-17677]뉴스클러스터링 jaehwan s
                 arr2[i]="-2";
             }
         }
-        int count=0;
+        int count=0; //교집합 수수
         for(int i=0;i<arr1.length;i++){
             for(int j=0;j< arr2.length;j++){
                 if(arr1[i].equals(arr2[j])){
@@ -52,9 +51,9 @@ public class 뉴스클러스터링 {//[PGM-17677]뉴스클러스터링 jaehwan s
             }
         }
 
-        if(count+ans==0){
+        if(count+ans==0){ //교집합 + 살아남은 원소개수
             answer=65536;
-        }else answer=count*num/(count+ans); // 교집합 / 총개수(합집합)
+        }else answer=(count*num)/(count+ans); // 교집합 / 총개수(합집합)
 
         return answer;
     }
