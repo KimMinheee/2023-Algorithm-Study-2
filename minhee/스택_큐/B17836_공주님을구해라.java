@@ -1,4 +1,4 @@
-package minhee;
+package minhee.스택_큐;
 
 import java.io.BufferedReader;
 import java.io.IOException;
