@@ -18,7 +18,7 @@ public class k진수에서소수구하기 {//[PGM-92335]k진수에서소수구�
                 if(answer.charAt(i) != '0'){
                     save+=answer.charAt(i);
                 }
-                else {//0이 붙어있는 경우 따로 처리 필요
+                else {//0이 붙어있는 경우 따로 처리 필요(0으로 처리)
                     prime = prime(Long.parseLong(save));
                     if(prime == true){//소수o
                         count++;
@@ -27,7 +27,7 @@ public class k진수에서소수구하기 {//[PGM-92335]k진수에서소수구�
                         save="0";
                     }
                 }
-            }
+            }//남은거 마무리 계산
             if(!save.equals("")){prime = prime(Long.parseLong(save));
                 if(prime == true){//소수o
                     count++;
