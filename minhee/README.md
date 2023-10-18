@@ -16,6 +16,7 @@
 | week3 | PGM |   [예상 대진표](https://school.programmers.co.kr/learn/courses/30/lessons/12985)   |  ⭕️   |
 | week3 | PGM | [n^2 배열자르기](https://school.programmers.co.kr/learn/courses/30/lessons/87390)  |  ⭕️   |
 | week3 | PGM |   [1차 캐시](https://school.programmers.co.kr/learn/courses/30/lessons/17680)    |  ⭕️   |
-| week3 | BOJ |   [계란으로 계란치기](https://www.acmicpc.net/problem/16987)    |  ⭕️   |
-| week3 | BOJ |   [봄버맨](https://www.acmicpc.net/problem/16918)    |  ⭕️   |
+| week3 | BOJ |              [계란으로 계란치기](https://www.acmicpc.net/problem/16987)               |  ⭕️   |
+| week3 | BOJ |                 [봄버맨](https://www.acmicpc.net/problem/16918)                  |  ⭕️   |
+| week4 | BOJ |                  [토마토](https://www.acmicpc.net/problem/7576)                  |  ⭕️   |
 
