@@ -10,7 +10,7 @@ public class BOJ_10815 {//[BOJ_10815]카드찾기 jaehwan solved - hash 사용
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
         StringTokenizer st = new StringTokenizer(br.readLine());
-        HashSet<Integer> cardSet = new HashSet<>();
+        HashSet<Integer> cardSet = new HashSet<>();//중복허용하지 않는 자료구조
 
         for (int i = 0; i < n; i++) {
             cardSet.add(Integer.parseInt(st.nextToken()));
@@ -21,7 +21,7 @@ public class BOJ_10815 {//[BOJ_10815]카드찾기 jaehwan solved - hash 사용
 
         for (int i = 0; i < m; i++) {
             int card = Integer.parseInt(st.nextToken());
-            if (cardSet.contains(card)) {
+            if (cardSet.contains(card)) { //요소검색속도 O(1)
                 System.out.print("1 ");
             } else {
                 System.out.print("0 ");
