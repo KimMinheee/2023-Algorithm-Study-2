@@ -1,6 +1,6 @@
 package programmers;
 
-public class PGM_17687 {//[PGM_17687]n진수 jaehwan solved
+public class n진수게임 {//[PGM_17687]n진수 jaehwan solved
     public static void main(String[] args) {
         Solution s=new Solution();
 
