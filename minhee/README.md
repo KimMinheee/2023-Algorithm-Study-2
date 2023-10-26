@@ -20,4 +20,5 @@
 | week3 | BOJ |                 [봄버맨](https://www.acmicpc.net/problem/16918)                  |  ⭕️   |
 | week4 | BOJ |                  [토마토](https://www.acmicpc.net/problem/7576)                  |  ⭕️   |
 | week4 | PGM |                  [튜플](https://school.programmers.co.kr/learn/courses/30/lessons/64065)                  |  ⭕️   |
-
+| week5 | BOJ |                  [숫자카드](https://www.acmicpc.net/problem/10815)                  |  ⭕️   |
+| week5 | PGM |                  [k진수에서 소수 개수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/92335)                  |  ⭕️   |
