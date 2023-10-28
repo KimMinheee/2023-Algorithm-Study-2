@@ -2,42 +2,38 @@ import java.util.*;
 import java.io.*;
 
 public class BOJ_12933 {//[BOJ_12933]오리 jaehwan solved 
-    public static void main(String[] args) throws IOException {
+   public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-        String sounds = "quack";
+        String quack = "quack";
         String n = br.readLine();
         int answer = 0;
-        boolean[] isChecked = new boolean[n.length()];
+        boolean[] ck = new boolean[n.length()];
 
         if (n.length() % 5 != 0) {
             answer = -1;
         } else {
-            for (boolean done = false; !done; ) {
+            for (boolean done = false; !done;) {//무한루프
                 int i = 0;
                 int j = 0;
                 int count = 0;
-
                 for (done = true; j < n.length(); j++) {
-                    if (isChecked[j]) {
+                    if (ck[j]) {
                         count++;
                     }
-
-                    if (!isChecked[j] && sounds.charAt(i % 5) == n.charAt(j)) {
-                        isChecked[j] = true;
+                    if (!ck[j] && quack.charAt(i % 5) == n.charAt(j)) {//사용하지 않은 문자이고,quack의 일부인 경우
+                        ck[j] = true;
                         i++;
                         done = false;
                     }
                 }
-
-                if (i / 5 > 0) {
+                if (i / 5 > 0) {//quack가 한번 완성되면 체크
                     answer++;
                 } else {
-                    if (count == n.length()) {
+                    if (count == n.length()) {//모든문자사용 탈출
                         break;
                     }
 
-                    answer = -1;
+                    answer = -1; //탈출 불가 남은 문자있으면 -1
                     break;
                 }
             }
