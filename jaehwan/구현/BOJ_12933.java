@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class BOJ_12933 {//[BOJ_12933]오리 jaehwan solved 
+public class BOJ_12933 {//[BOJ_12933]오리 jaehwan solved  
    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String quack = "quack";
