@@ -10,8 +10,7 @@ class 방문길이 { //[PGM-49994]방문길이 jaehwan solved
         for (int i = 0; i < dirs.length(); i++) {
             char direction = dirs.charAt(i);
             int plus = 0;
-
-            // Determine the index for the given direction
+            
             if (direction == 'U') {
                 plus = 0;
             } else if (direction == 'L') {
@@ -34,7 +33,6 @@ class 방문길이 { //[PGM-49994]방문길이 jaehwan solved
                 visit[ax][ay][x][y] = true;
                 answer++;
             }
-
             x = ax;
             y = ay;
         }
