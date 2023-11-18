@@ -37,6 +37,7 @@ public class BOJ_9934 {//[BOJ_9934]완전이진트리 jaehwan solved
             for (int j : list.get(i)) {
                 System.out.printf(j+" ");
             }
+            System.out.println();
         }
     }
     static void search(int start, int end, int depth) {
